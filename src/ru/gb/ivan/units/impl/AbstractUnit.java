@@ -17,6 +17,7 @@ public abstract class AbstractUnit implements Unit {
         return this.color;
     }
 
+    @Override
     public String getName(){
         return this.name;
     }
