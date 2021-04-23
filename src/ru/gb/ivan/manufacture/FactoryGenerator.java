@@ -5,15 +5,15 @@ import ru.gb.ivan.common.Color;
 public class FactoryGenerator {
     private static volatile FactoryGenerator instance;
 
-    public UnitFactory createFactory(Color color){
+    public UnitFactory createUnitFactory(Color color){
         UnitFactory factory;
 
         switch(color){
             case RED:
-                factory = new RedFactory();
+                factory = new RedUnitFactory();
                 break;
             case BLUE:
-                factory = new BlueFactory();
+                factory = new BlueUnitFactory();
                 break;
             default:
                 factory = null;
@@ -21,6 +21,13 @@ public class FactoryGenerator {
 
         return factory;
     }
+
+    public UnitCommandFactory createUnitCommandFactory(){
+        UnitCommandFactory factory = new UnitCommandFactoryImpl();
+        return factory;
+    }
+
+    private FactoryGenerator(){}
 
     public static FactoryGenerator getInstance() {
         FactoryGenerator gen = instance;
