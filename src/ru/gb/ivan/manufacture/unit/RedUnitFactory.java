@@ -1,14 +1,14 @@
-package ru.gb.ivan.manufacture;
+package ru.gb.ivan.manufacture.unit;
 
 import ru.gb.ivan.common.Color;
 import ru.gb.ivan.units.impl.Human;
 import ru.gb.ivan.units.impl.Orc;
 import ru.gb.ivan.units.impl.Shark;
 
-public class BlueFactory implements UnitFactory {
-    private final Color color = Color.BLUE;
+public class RedUnitFactory implements UnitFactory {
+    private final Color color = Color.RED;
 
-    BlueFactory(){}
+    RedUnitFactory(){}
 
     @Override
     public Human createHuman(String name){

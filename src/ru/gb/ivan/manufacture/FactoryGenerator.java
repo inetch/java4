@@ -1,6 +1,9 @@
 package ru.gb.ivan.manufacture;
 
 import ru.gb.ivan.common.Color;
+import ru.gb.ivan.manufacture.unit.BlueUnitFactory;
+import ru.gb.ivan.manufacture.unit.RedUnitFactory;
+import ru.gb.ivan.manufacture.unit.UnitFactory;
 
 public class FactoryGenerator {
     private static volatile FactoryGenerator instance;
@@ -10,10 +13,10 @@ public class FactoryGenerator {
 
         switch(color){
             case RED:
-                factory = new RedFactory();
+                factory = new RedUnitFactory();
                 break;
             case BLUE:
-                factory = new BlueFactory();
+                factory = new BlueUnitFactory();
                 break;
             default:
                 factory = null;

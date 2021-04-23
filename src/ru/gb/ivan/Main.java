@@ -3,7 +3,7 @@ package ru.gb.ivan;
 import ru.gb.ivan.common.Color;
 import ru.gb.ivan.decorators.angry.Angry;
 import ru.gb.ivan.manufacture.FactoryGenerator;
-import ru.gb.ivan.manufacture.UnitFactory;
+import ru.gb.ivan.manufacture.unit.UnitFactory;
 import ru.gb.ivan.units.LandUnit;
 import ru.gb.ivan.units.WaterUnit;
 

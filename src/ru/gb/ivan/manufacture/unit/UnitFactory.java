@@ -1,4 +1,4 @@
-package ru.gb.ivan.manufacture;
+package ru.gb.ivan.manufacture.unit;
 
 import ru.gb.ivan.units.impl.Human;
 import ru.gb.ivan.units.impl.Orc;
