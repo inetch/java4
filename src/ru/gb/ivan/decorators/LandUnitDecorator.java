@@ -1,5 +1,6 @@
 package ru.gb.ivan.decorators;
 
+import ru.gb.ivan.command.UnitCommand;
 import ru.gb.ivan.common.Color;
 import ru.gb.ivan.units.LandUnit;
 import ru.gb.ivan.units.Unit;

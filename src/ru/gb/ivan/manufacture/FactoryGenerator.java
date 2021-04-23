@@ -1,14 +1,11 @@
 package ru.gb.ivan.manufacture;
 
 import ru.gb.ivan.common.Color;
-import ru.gb.ivan.manufacture.unit.BlueUnitFactory;
-import ru.gb.ivan.manufacture.unit.RedUnitFactory;
-import ru.gb.ivan.manufacture.unit.UnitFactory;
 
 public class FactoryGenerator {
     private static volatile FactoryGenerator instance;
 
-    public UnitFactory createFactory(Color color){
+    public UnitFactory createUnitFactory(Color color){
         UnitFactory factory;
 
         switch(color){
@@ -24,6 +21,13 @@ public class FactoryGenerator {
 
         return factory;
     }
+
+    public UnitCommandFactory createUnitCommandFactory(){
+        UnitCommandFactory factory = new UnitCommandFactoryImpl();
+        return factory;
+    }
+
+    private FactoryGenerator(){}
 
     public static FactoryGenerator getInstance() {
         FactoryGenerator gen = instance;

@@ -1,5 +1,6 @@
 package ru.gb.ivan.decorators;
 
+import ru.gb.ivan.command.UnitCommand;
 import ru.gb.ivan.common.Color;
 import ru.gb.ivan.units.Unit;
 
@@ -18,5 +19,10 @@ public abstract class UnitDecorator implements Unit {
     @Override
     public Color getColor(){
         return unit.getColor();
+    }
+
+    @Override
+    public void executeCommand(UnitCommand command){
+        unit.executeCommand(command);
     }
 }
